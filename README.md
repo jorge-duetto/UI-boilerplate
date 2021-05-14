@@ -1,2 +1,2 @@
-# cities-selector
-Cities Selector UI
+# UI-Boilerplate
+UI-Boilerplate
