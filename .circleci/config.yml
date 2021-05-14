@@ -19,8 +19,14 @@ jobs:
           paths:
             - ~/.npm
       - run:
+          name: Run Linter
+          command: npm run lint
+      - run:
           name: Run Tests
           command: npm run test
+      - run:
+          name: Build prod mode
+          command: npm run build
 
 workflows:
   orb-free-workflow:
