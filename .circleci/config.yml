@@ -27,11 +27,8 @@ jobs:
       - run:
           name: Build prod mode
           command: npm run build
-  deploy:
-    steps:
 
 workflows:
   circle-ci-test:
     jobs:
       - test
-      - deploy
