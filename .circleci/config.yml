@@ -27,8 +27,11 @@ jobs:
       - run:
           name: Build prod mode
           command: npm run build
+  deploy:
+    steps:
 
 workflows:
-  orb-free-workflow:
+  circle-ci-test:
     jobs:
       - test
+      - deploy
