@@ -31,7 +31,7 @@ jobs:
           command: npm run build
       - aws-s3/copy:
           arguments: '--recursive'
-          from: ~/project/dist/*.*
+          from: ~/project/dist
           to: 's3://ui-boilerplate/'
  
 workflows:
