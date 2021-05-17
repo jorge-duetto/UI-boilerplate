@@ -30,8 +30,7 @@ jobs:
           name: Build prod mode
           command: npm run build
       - aws-s3/copy:
-          arguments: '--dryrun'
-          from: ~/project/dist/*.*
+          from: ~/project/dist/
           to: 's3://ui-boilerplate/'
  
 workflows:
