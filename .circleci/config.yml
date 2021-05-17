@@ -1,5 +1,6 @@
 version: 2.1
-
+orbs:
+  aws-s3: circleci/aws-s3@2.0.0       
 jobs:
   test:
     docker:
@@ -32,14 +33,14 @@ jobs:
       -run:
           name: deploy to s3
       - aws-s3/sync:
-        aws-access-key-id: AWS_ACCESS_KEY_ID
-        aws-region: AWS_REGION
-        aws-secret-access-key: AWS_SECRET_KEY
-        from: ~/project/dist/
-        to: 's3://ui-boilerplate/'
-orbs:
-  aws-s3: circleci/aws-s3@2.0.0        
+          aws-access-key-id: AWS_ACCESS_KEY_ID
+          aws-region: AWS_REGION
+          aws-secret-access-key: AWS_SECRET_KEY
+          from: ~/project/dist/
+          to: 's3://ui-boilerplate/'
+ 
 workflows:
   circle-ci-test:
     jobs:
       - test
+      - deploy
