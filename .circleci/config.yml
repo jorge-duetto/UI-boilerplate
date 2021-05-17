@@ -30,7 +30,8 @@ jobs:
           name: Build prod mode
           command: npm run build
       - aws-s3/copy:
-          from: ~/project/dist/
+          arguments: '--recursive'
+          from: ~/project/dist/*.*
           to: 's3://ui-boilerplate/'
  
 workflows:
