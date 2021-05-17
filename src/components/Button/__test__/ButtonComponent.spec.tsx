@@ -7,7 +7,7 @@ import ButtonComponent from '../ButtonComponent';
 configure({ adapter: new Adapter() });
 
 describe('Render a button', () => {
-  it('should render a simple span wit the tile if no option for icon is passed', () => {
+  it('should render a simple span with the tile if no option for icon is passed', () => {
     const wrapper = mount(
       <ButtonComponent />,
     );
