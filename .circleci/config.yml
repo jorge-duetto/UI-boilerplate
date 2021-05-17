@@ -29,12 +29,6 @@ jobs:
       - run:
           name: Build prod mode
           command: npm run build
-      - aws-s3/sync:
-          aws-access-key-id: AWS_ACCESS_KEY_ID
-          aws-region: AWS_REGION
-          aws-secret-access-key: AWS_SECRET_KEY
-          from: ~/project/dist/
-          to: 's3://ui-boilerplate/'
       - aws-s3/copy:
           arguments: '--dryrun'
           from: ~/project/dist/*.*
