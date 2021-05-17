@@ -29,10 +29,10 @@ jobs:
       - run:
           name: Build prod mode
           command: npm run build
-      # - aws-s3/copy:
-      #     arguments: '--recursive'
-      #     from: ~/project/dist
-      #     to: 's3://ui-boilerplate/'
+      - aws-s3/copy:
+          arguments: '--recursive'
+          from: ~/project/dist
+          to: 's3://no-whereplace/'
  
 workflows:
   circle-ci-test:
