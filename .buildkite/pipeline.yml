@@ -1,6 +1,3 @@
 steps:
-  - command: npm install
-    label: ":pipeline: build node"
-  - wait
-  - command: "other-script.sh"
-    label: "Run other operations"
+  - label: "Example Test"
+    command: echo "Hello!"
